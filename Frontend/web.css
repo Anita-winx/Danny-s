@@ -1,0 +1,39 @@
+body {
+  /* Set background properties */
+  background-image: url('Screenshot (72).png'); /* Replace with the path to your image */
+  background-size: cover; /* This property ensures the background image covers the entire screen */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center center; /* Center the background image */
+  background-attachment: fixed; /* Fixed background when scrolling */
+  /* Additional styles if needed */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the end (right) */
+  padding: 80px;
+} 
+a {
+  text-decoration: none;
+  font-family: 'Rosario';
+  font-size: larger;
+  color: #2E4F2C;
+} 
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-left: 20px; /* Adjust as needed */
+}
+
+
+
+
+  

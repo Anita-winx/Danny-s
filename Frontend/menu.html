@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danny's Pizzeria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2e4f2c;
+      color: #fff;
+    }
+
+    header {
+      background-color: #ffd89a;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f5ba5e;
+      color: #fff;
+      padding: 10px;
+      text-align: right;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #2e4f2c;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .menu-item img {
+      max-width: 100%;
+      max-height: 100px;
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: #f5ba5e;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Danny's menu</h1>
+  </header>
+
+  <nav>
+    <a href="Danny's.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+      <img src="margherita.jpeg" alt="Pizza Margherita">
+      <div>
+        <h3>Pizza Margherita</h3>
+        <p>Classic tomato sauce, fresh mozzarella, basil.</p>
+        <label for="margherita-size">Select size:</label>
+        <select id="margherita-size" name="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+        
+        <div id="margherita-price-display">Select a size to see the price.</div>
+       
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="Pepperoni.jpeg" alt="Pepperoni Pizza">
+      <div>
+        <h3>Pepperoni Pizza</h3>
+        <p>Tomato sauce, mozzarella, pepperoni.</p>
+        <label for="pepperoni-size">Select size:</label>
+        <select id="pepperoni-size" name="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+        <div id="pepperoni-price-display">Select a size to see the price.</div>
+      </div>
+    </div>
+
+    
+    <!-- Add more menu items as needed -->
+
+    <script>
+        // JavaScript to handle size selection and display price
+        document.getElementById("margherita-size").addEventListener("change", function() {
+          var selectedSize = this.value;
+          var priceDisplay = document.getElementById("margherita-price-display");
+  
+          // Set prices based on selected size
+          var prices = {
+            small: 900,
+            medium: 1200,
+            large: 1400
+          };
+  
+          // Display the selected size and price
+          priceDisplay.textContent = "Price for " + selectedSize + ": $KSH " + prices[selectedSize];
+        });
+      </script>
+      <script>
+        // JavaScript to handle size selection and display price
+        document.getElementById("pepperoni-size").addEventListener("change", function() {
+          var selectedSize = this.value;
+          var priceDisplay = document.getElementById("pepperoni-price-display");
+  
+          // Set prices based on selected size
+          var prices = {
+            small: 1000,
+            medium: 1250,
+            large: 1500
+          };
+  
+          // Display the selected size and price
+          priceDisplay.textContent = "Price for " + selectedSize + ": $KSH " + prices[selectedSize];
+        });
+      </script>
+
+  </div>
+
+  <footer>
+    &copy; 2024 Danny's Place.
+  </footer>
+
+</body>
+</html>
+
